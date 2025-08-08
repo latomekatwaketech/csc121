@@ -16,7 +16,7 @@ This course is perfect for students new to programming or those looking to stren
 ## Course Logistics
 - **Delivery**: Online, with optional in-person meetings on Microsoft Teams.
 - **Prerequisites**: CTI 110 or CSC 120; as well as basic computer literacy.
-- **Tools**: Python 3.10+, PyCharm (installation instructions to be added on the [Live Home Page](https://latomekatwaketech.github.io/csc121/index.html)).
+- **Tools**: Python 3.13 (latest stable version), PyCharm (installation instructions to be added on the [Live Home Page](https://latomekatwaketech.github.io/csc121/index.html)).
 - **Accessibility**: Course materials are designed to be accessible, with accommodations available via Wake Tech’s [Accessibility Services](https://www.waketech.edu/student-services/disability-support-services).
 
 This course provides hands-on experience with coding concepts transferable to other languages and domains. Whether you’re aiming for a career in software development or exploring computer science, CSC 121 equips you with the tools to succeed.

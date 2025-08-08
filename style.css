@@ -1,0 +1,270 @@
+/* =========================================================
+   CSC 121 – Site Styles
+   - Minimal, accessible, GitHub Pages-friendly CSS
+   - Works for index.html and chapters/chXX.html
+   - Includes basic dark-mode support and print styles
+   ========================================================= */
+
+/* ---------- CSS Variables (Light) ---------- */
+:root{
+  --bg: #f8f9fa;
+  --fg: #222;
+  --muted: #6b7280;
+  --brand: #004b87;     /* Wake Tech-ish deep blue */
+  --brand-2: #0ea5e9;   /* accent (links/hover)    */
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --table-head: #f1f5f9;
+  --focus: #ffbf47;     /* high-contrast focus ring */
+  --code-bg: #f3f4f6;
+  --kbd-bg: #111827;
+  --kbd-fg: #f9fafb;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
+  --radius: 12px;
+  --maxw: 980px;
+  --line: 1.65;
+  --font: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* ---------- Dark Mode ---------- */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b1220;
+    --fg: #e5e7eb;
+    --muted: #9ca3af;
+    --brand: #60a5fa;
+    --brand-2: #7dd3fc;
+    --card: #0f172a;
+    --border: #1f2937;
+    --table-head: #111827;
+    --code-bg: #0b1328;
+    --kbd-bg: #374151;
+    --kbd-fg: #f9fafb;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+}
+
+/* ---------- Global Reset-ish ---------- */
+*{ box-sizing: border-box; }
+html,body{ margin:0; padding:0; }
+html{ scroll-behavior: smooth; }
+body{
+  font-family: var(--font);
+  line-height: var(--line);
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Layout ---------- */
+header{
+  background: var(--brand);
+  color: #fff;
+  padding: 2rem 1rem 1.5rem;
+  text-align: center;
+}
+header h1{ margin: 0 0 .25rem 0; font-size: clamp(1.6rem, 2.5vw, 2.2rem); }
+header p{ margin: 0; opacity: .95; }
+
+nav{
+  background: linear-gradient(0deg, var(--card), var(--card));
+  border-bottom: 1px solid var(--border);
+  padding: .65rem 1rem;
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav a{
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+  padding: .35rem .6rem;
+  border-radius: 8px;
+}
+nav a:hover, nav a:focus{
+  background: rgba(14,165,233,.10);
+  outline: none;
+}
+
+main{
+  max-width: var(--maxw);
+  margin: 1.25rem auto;
+  padding: 0 1rem;
+}
+section{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  margin: 1rem 0 1.25rem;
+}
+section h2{
+  margin-top: 0;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+section h3{
+  margin-top: 1.2rem;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+footer{
+  margin-top: 2rem;
+  background: var(--brand);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+footer a{ color: #fff; text-decoration: underline; }
+
+/* ---------- Typography ---------- */
+p{ margin: .6rem 0 1rem; }
+ul,ol{ padding-left: 1.25rem; margin: .4rem 0 1rem; }
+li{ margin: .25rem 0; }
+a{ color: var(--brand-2); }
+a:hover, a:focus{ text-decoration: underline; outline: none; }
+
+.small{ font-size: .92rem; color: var(--muted); }
+.muted{ color: var(--muted); }
+
+/* ---------- Tables ---------- */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+th, td{
+  padding: .6rem .7rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+th{
+  background: var(--table-head);
+  text-align: left;
+  font-weight: 700;
+}
+tr:last-child td{ border-bottom: 0; }
+table.striped tbody tr:nth-child(odd){ background: rgba(0,0,0,.02); }
+
+/* ---------- Code / Pre / KBD ---------- */
+code, pre, kbd{ font-family: var(--mono); }
+code{
+  background: var(--code-bg);
+  padding: .15rem .35rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: .95em;
+}
+pre{
+  background: var(--code-bg);
+  padding: .9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: auto;
+}
+pre code{ background: transparent; border: 0; padding: 0; }
+kbd{
+  background: var(--kbd-bg);
+  color: var(--kbd-fg);
+  border-radius: 6px;
+  padding: .12rem .4rem;
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+/* ---------- Cards & Callouts ---------- */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+.callout{
+  border-left: 4px solid var(--brand-2);
+  background: rgba(14,165,233,.08);
+  padding: .8rem 1rem;
+  border-radius: 8px;
+}
+.callout.warn{
+  border-left-color: #f59e0b;
+  background: rgba(245,158,11,.10);
+}
+.callout.ok{
+  border-left-color: #10b981;
+  background: rgba(16,185,129,.10);
+}
+
+/* ---------- Buttons (utility) ---------- */
+.button, a.button{
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  padding: .55rem .9rem;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.button:hover, .button:focus{
+  background: #0369a1;
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* ---------- Forms (light use) ---------- */
+input[type="text"], input[type="search"], select{
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+  border-radius: 10px;
+  padding: .5rem .6rem;
+}
+label{ font-weight: 600; }
+
+/* ---------- Skip Link (optional if added to HTML) ---------- */
+.skip-link{
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus{
+  position: static;
+  width: auto;
+  height: auto;
+  background: #fff;
+  color: #000;
+  padding: .4rem .6rem;
+  border-radius: 6px;
+}
+
+/* ---------- Utilities ---------- */
+.container{ max-width: var(--maxw); margin: 0 auto; padding: 0 1rem; }
+.center{ text-align: center; }
+.grid{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.hr{
+  height: 1px;
+  background: var(--border);
+  margin: 1rem 0;
+  border: 0;
+}
+
+/* ---------- Print ---------- */
+@media print{
+  nav, footer{ display: none !important; }
+  section{ box-shadow: none; border-color: #ccc; }
+  a{ color: #000; text-decoration: underline; }
+}
