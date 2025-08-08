@@ -2,7 +2,7 @@
 
 CSC 121: Python Programming is an introductory course designed to build a strong foundation in programming using Python 3.10 or later, a versatile and widely-used language. Python’s clear syntax and powerful capabilities make it ideal for beginners and professionals, with applications in web development, data science, automation, and more.
 
-This course is perfect for students new to programming or those looking to strengthen their coding skills. You’ll learn to design algorithmic solutions, master Python fundamentals, and apply object-oriented programming principles. By the end, you’ll write efficient, well-structured programs and tackle real-world challenges with confidence. Explore course materials on our [Live Home Page](https://latomekatwaketech.github.io/csc121/index.html) or reach out with questions!
+This course is perfect for students new to programming or those looking to strengthen their coding skills. You’ll learn to design algorithmic solutions, master Python fundamentals, and apply object-oriented programming principles. By the end, you’ll write efficient, well-structured programs and tackle real-world challenges with confidence. Explore course materials on our [Live Home Page](https://latomekatwaketech.github.io/csc121/) or reach out with questions!
 
 ## Course Objectives
 | Objective | Description |
@@ -16,7 +16,7 @@ This course is perfect for students new to programming or those looking to stren
 ## Course Logistics
 - **Delivery**: Online, with optional in-person meetings on Microsoft Teams.
 - **Prerequisites**: CTI 110 or CSC 120; as well as basic computer literacy.
-- **Tools**: Python 3.13 (latest stable version), PyCharm (installation instructions to be added on the [Live Home Page](https://latomekatwaketech.github.io/csc121/index.html)).
+- **Tools**: Python 3.13 (latest stable version), PyCharm (installation instructions to be added on the [Live Home Page](https://latomekatwaketech.github.io/csc121/)).
 - **Accessibility**: Course materials are designed to be accessible, with accommodations available via Wake Tech’s [Accessibility Services](https://www.waketech.edu/student-services/disability-support-services).
 
 This course provides hands-on experience with coding concepts transferable to other languages and domains. Whether you’re aiming for a career in software development or exploring computer science, CSC 121 equips you with the tools to succeed.
